@@ -225,6 +225,196 @@
                   }
                 }
               },
+              "Application2Subnet1": {
+                "id": "Application2Subnet1",
+                "path": "dnsforward/VPC/Application2Subnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "dnsforward/VPC/Application2Subnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.2.0/24",
+                        "vpcId": {
+                          "Ref": "VPCB9E5F0B4"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "dnsforward/VPC/Application2Subnet1"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Application2"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "dnsforward/VPC/Application2Subnet1/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "dnsforward/VPC/Application2Subnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "VPCB9E5F0B4"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "dnsforward/VPC/Application2Subnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "dnsforward/VPC/Application2Subnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VPCApplication2Subnet1RouteTableDB20A141"
+                        },
+                        "subnetId": {
+                          "Ref": "VPCApplication2Subnet1Subnet4B1EB777"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "dnsforward/VPC/Application2Subnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VPCApplication2Subnet1RouteTableDB20A141"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "VPCIGWB7E252D3"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Application2Subnet2": {
+                "id": "Application2Subnet2",
+                "path": "dnsforward/VPC/Application2Subnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "dnsforward/VPC/Application2Subnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.3.0/24",
+                        "vpcId": {
+                          "Ref": "VPCB9E5F0B4"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "dnsforward/VPC/Application2Subnet2"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Application2"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "dnsforward/VPC/Application2Subnet2/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "dnsforward/VPC/Application2Subnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "VPCB9E5F0B4"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "dnsforward/VPC/Application2Subnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "dnsforward/VPC/Application2Subnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VPCApplication2Subnet2RouteTable2D5980B6"
+                        },
+                        "subnetId": {
+                          "Ref": "VPCApplication2Subnet2SubnetF506FEB3"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "dnsforward/VPC/Application2Subnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VPCApplication2Subnet2RouteTable2D5980B6"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "VPCIGWB7E252D3"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
               "IGW": {
                 "id": "IGW",
                 "path": "dnsforward/VPC/IGW",
@@ -251,6 +441,42 @@
                     },
                     "internetGatewayId": {
                       "Ref": "VPCIGWB7E252D3"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "test-security-group": {
+            "id": "test-security-group",
+            "path": "dnsforward/test-security-group",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "dnsforward/test-security-group/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                  "aws:cdk:cloudformation:props": {
+                    "groupDescription": "dnsforward/test-security-group",
+                    "groupName": "test-security-group",
+                    "securityGroupEgress": [
+                      {
+                        "cidrIp": "0.0.0.0/0",
+                        "description": "Allow all outbound traffic by default",
+                        "ipProtocol": "-1"
+                      }
+                    ],
+                    "securityGroupIngress": [
+                      {
+                        "cidrIp": "10.0.0.0/21",
+                        "ipProtocol": "tcp",
+                        "fromPort": 22,
+                        "toPort": 22,
+                        "description": "from 10.0.0.0/21:22"
+                      }
+                    ],
+                    "vpcId": {
+                      "Ref": "VPCB9E5F0B4"
                     }
                   }
                 }

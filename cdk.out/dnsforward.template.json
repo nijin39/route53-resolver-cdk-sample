@@ -186,6 +186,174 @@
         "aws:cdk:path": "dnsforward/VPC/ApplicationSubnet2/DefaultRoute"
       }
     },
+    "VPCApplication2Subnet1Subnet4B1EB777": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.2.0/24",
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "dnsforward/VPC/Application2Subnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Application2"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/VPC/Application2Subnet1/Subnet"
+      }
+    },
+    "VPCApplication2Subnet1RouteTableDB20A141": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "dnsforward/VPC/Application2Subnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/VPC/Application2Subnet1/RouteTable"
+      }
+    },
+    "VPCApplication2Subnet1RouteTableAssociationF47C882E": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VPCApplication2Subnet1RouteTableDB20A141"
+        },
+        "SubnetId": {
+          "Ref": "VPCApplication2Subnet1Subnet4B1EB777"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/VPC/Application2Subnet1/RouteTableAssociation"
+      }
+    },
+    "VPCApplication2Subnet1DefaultRouteF53AC5D8": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VPCApplication2Subnet1RouteTableDB20A141"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "VPCIGWB7E252D3"
+        }
+      },
+      "DependsOn": [
+        "VPCVPCGW99B986DC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/VPC/Application2Subnet1/DefaultRoute"
+      }
+    },
+    "VPCApplication2Subnet2SubnetF506FEB3": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.3.0/24",
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "dnsforward/VPC/Application2Subnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Application2"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/VPC/Application2Subnet2/Subnet"
+      }
+    },
+    "VPCApplication2Subnet2RouteTable2D5980B6": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "dnsforward/VPC/Application2Subnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/VPC/Application2Subnet2/RouteTable"
+      }
+    },
+    "VPCApplication2Subnet2RouteTableAssociation2014085E": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VPCApplication2Subnet2RouteTable2D5980B6"
+        },
+        "SubnetId": {
+          "Ref": "VPCApplication2Subnet2SubnetF506FEB3"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/VPC/Application2Subnet2/RouteTableAssociation"
+      }
+    },
+    "VPCApplication2Subnet2DefaultRoute3F32690E": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VPCApplication2Subnet2RouteTable2D5980B6"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "VPCIGWB7E252D3"
+        }
+      },
+      "DependsOn": [
+        "VPCVPCGW99B986DC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/VPC/Application2Subnet2/DefaultRoute"
+      }
+    },
     "VPCIGWB7E252D3": {
       "Type": "AWS::EC2::InternetGateway",
       "Properties": {
@@ -212,6 +380,35 @@
       },
       "Metadata": {
         "aws:cdk:path": "dnsforward/VPC/VPCGW"
+      }
+    },
+    "testsecuritygroupCC071DFA": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "dnsforward/test-security-group",
+        "GroupName": "test-security-group",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "10.0.0.0/21",
+            "Description": "from 10.0.0.0/21:22",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
+          }
+        ],
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/test-security-group/Resource"
       }
     }
   }
