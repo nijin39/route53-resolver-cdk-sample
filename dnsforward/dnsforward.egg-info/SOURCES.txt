@@ -1,0 +1,6 @@
+README.md
+dnsforward/dnsforward.egg-info/PKG-INFO
+dnsforward/dnsforward.egg-info/SOURCES.txt
+dnsforward/dnsforward.egg-info/dependency_links.txt
+dnsforward/dnsforward.egg-info/requires.txt
+dnsforward/dnsforward.egg-info/top_level.txt
