@@ -482,6 +482,36 @@
                 }
               }
             }
+          },
+          "dns_master": {
+            "id": "dns_master",
+            "path": "dnsforward/dns_master",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::Instance",
+              "aws:cdk:cloudformation:props": {
+                "availabilityZone": "ap-northeast-2a",
+                "imageId": "ami-00d293396a942208d",
+                "instanceType": "t2.micro",
+                "keyName": "SeoulRegion",
+                "securityGroupIds": [
+                  {
+                    "Fn::GetAtt": [
+                      "testsecuritygroupCC071DFA",
+                      "GroupId"
+                    ]
+                  }
+                ],
+                "subnetId": {
+                  "Ref": "VPCApplicationSubnet1SubnetCE118F80"
+                },
+                "tags": [
+                  {
+                    "key": "dns",
+                    "value": "master"
+                  }
+                ]
+              }
+            }
           }
         }
       }

@@ -37,3 +37,22 @@ class DnsforwardStack(core.Stack):
             peer=ec2.Peer.ipv4(cidr),
             connection=ec2.Port.tcp(22),
         )
+        
+        dns_server = ec2.MachineImage.generic_linux({
+            "ap-northeast-2" : "ami-00d293396a942208d"
+        })
+        
+        ec2.CfnInstance(
+            self,
+            id="dns_master",
+            availability_zone = "ap-northeast-2a",
+            image_id = dns_server.get_image(self).image_id,
+            instance_type = "t2.micro",
+            key_name = "SeoulRegion",
+            security_group_ids = [security_group.security_group_id],
+            subnet_id = vpc.public_subnets[0].subnet_id,
+            tags = [{
+                "key":"dns",
+                "value":"master"
+            }]
+        )

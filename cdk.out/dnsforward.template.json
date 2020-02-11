@@ -410,6 +410,35 @@
       "Metadata": {
         "aws:cdk:path": "dnsforward/test-security-group/Resource"
       }
+    },
+    "dnsmaster": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "ap-northeast-2a",
+        "ImageId": "ami-00d293396a942208d",
+        "InstanceType": "t2.micro",
+        "KeyName": "SeoulRegion",
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "testsecuritygroupCC071DFA",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Ref": "VPCApplicationSubnet1SubnetCE118F80"
+        },
+        "Tags": [
+          {
+            "Key": "dns",
+            "Value": "master"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/dns_master"
+      }
     }
   }
 }
