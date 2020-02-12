@@ -68,6 +68,114 @@
             ]
           }
         ],
+        "/dnsforward/Internet_Gateway_DNS_Example": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InternetGatewayDNSExample",
+            "trace": [
+              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/dnsforward/vpcgw": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcgw",
+            "trace": [
+              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/dnsforward/dns_example_routetable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dnsexampleroutetable",
+            "trace": [
+              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/dnsforward/IGW_Route": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IGWRoute",
+            "trace": [
+              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/dnsforward/DnsSubnet_Associate_2a": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DnsSubnetAssociate2a",
+            "trace": [
+              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/dnsforward/DnsSubnet_Associate_2c": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DnsSubnetAssociate2c",
+            "trace": [
+              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
         "/dnsforward/sg-ssh": [
           {
             "type": "aws:cdk:logicalId",

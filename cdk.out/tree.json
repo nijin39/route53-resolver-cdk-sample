@@ -70,6 +70,100 @@
               }
             }
           },
+          "Internet_Gateway_DNS_Example": {
+            "id": "Internet_Gateway_DNS_Example",
+            "path": "dnsforward/Internet_Gateway_DNS_Example",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+              "aws:cdk:cloudformation:props": {
+                "tags": [
+                  {
+                    "key": "Name",
+                    "value": "Internet_Gateway_for_DNS"
+                  }
+                ]
+              }
+            }
+          },
+          "vpcgw": {
+            "id": "vpcgw",
+            "path": "dnsforward/vpcgw",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+              "aws:cdk:cloudformation:props": {
+                "vpcId": {
+                  "Ref": "VPC"
+                },
+                "internetGatewayId": {
+                  "Ref": "InternetGatewayDNSExample"
+                }
+              }
+            }
+          },
+          "dns_example_routetable": {
+            "id": "dns_example_routetable",
+            "path": "dnsforward/dns_example_routetable",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+              "aws:cdk:cloudformation:props": {
+                "vpcId": {
+                  "Ref": "VPC"
+                },
+                "tags": [
+                  {
+                    "key": "Name",
+                    "value": "Route_for_DNS"
+                  }
+                ]
+              }
+            }
+          },
+          "IGW_Route": {
+            "id": "IGW_Route",
+            "path": "dnsforward/IGW_Route",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+              "aws:cdk:cloudformation:props": {
+                "routeTableId": {
+                  "Ref": "dnsexampleroutetable"
+                },
+                "destinationCidrBlock": "0.0.0.0/0",
+                "gatewayId": {
+                  "Ref": "InternetGatewayDNSExample"
+                }
+              }
+            }
+          },
+          "DnsSubnet_Associate_2a": {
+            "id": "DnsSubnet_Associate_2a",
+            "path": "dnsforward/DnsSubnet_Associate_2a",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+              "aws:cdk:cloudformation:props": {
+                "routeTableId": {
+                  "Ref": "dnsexampleroutetable"
+                },
+                "subnetId": {
+                  "Ref": "subnet2a"
+                }
+              }
+            }
+          },
+          "DnsSubnet_Associate_2c": {
+            "id": "DnsSubnet_Associate_2c",
+            "path": "dnsforward/DnsSubnet_Associate_2c",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+              "aws:cdk:cloudformation:props": {
+                "routeTableId": {
+                  "Ref": "dnsexampleroutetable"
+                },
+                "subnetId": {
+                  "Ref": "subnet2c"
+                }
+              }
+            }
+          },
           "sg-ssh": {
             "id": "sg-ssh",
             "path": "dnsforward/sg-ssh",

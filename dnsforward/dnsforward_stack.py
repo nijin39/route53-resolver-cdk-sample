@@ -43,6 +43,50 @@ class DnsforwardStack(core.Stack):
             tags = [core.Tag(key="Name",value="subnet-2c")]
         )
         
+        # 03. Internet Gateway 생성
+        internet_gateway = ec2.CfnInternetGateway(
+            self,
+            id = "Internet_Gateway_DNS_Example",
+            tags = [core.Tag(key="Name",value="Internet_Gateway_for_DNS")]
+        )
+        
+        # 04. Internat Gateway Attach
+        ec2.CfnVPCGatewayAttachment(
+            self,
+            id = "vpcgw",
+            vpc_id = cfVpc.ref,
+            internet_gateway_id = internet_gateway.ref
+        )
+        
+        #05. Route Table 생성
+        route_table = ec2.CfnRouteTable(self,
+            id = "dns_example_routetable",
+            vpc_id = cfVpc.ref,
+            tags = [core.Tag(key="Name",value="Route_for_DNS")]
+        )
+        
+        #Route
+        ec2.CfnRoute(
+            self,
+            id="IGW_Route",
+            route_table_id = route_table.ref,
+            destination_cidr_block = "0.0.0.0/0",
+            gateway_id = internet_gateway.ref)
+            
+        ec2.CfnSubnetRouteTableAssociation(
+            self,
+            id = "DnsSubnet_Associate_2a",
+            route_table_id = route_table.ref,
+            subnet_id = subnet_2a.ref
+            )
+        
+        ec2.CfnSubnetRouteTableAssociation(
+            self,
+            id = "DnsSubnet_Associate_2c",
+            route_table_id = route_table.ref,
+            subnet_id = subnet_2c.ref
+            )
+    
         # 03. SG 생성
         sg = ec2.CfnSecurityGroup(self,
                                  id="sg-ssh",
@@ -63,7 +107,7 @@ class DnsforwardStack(core.Stack):
                                                      #to_port=65535,
                                                      cidr_ip="0.0.0.0/0")
 
-        # 04. EC2 생성
+        # 04. DNS Server EC2 생성
         dns_server = ec2.MachineImage.generic_linux({
             "ap-northeast-2" : "ami-00d293396a942208d"
         })

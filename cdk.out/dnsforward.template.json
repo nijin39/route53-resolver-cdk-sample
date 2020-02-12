@@ -55,6 +55,94 @@
         "aws:cdk:path": "dnsforward/subnet_2c"
       }
     },
+    "InternetGatewayDNSExample": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "Internet_Gateway_for_DNS"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/Internet_Gateway_DNS_Example"
+      }
+    },
+    "vpcgw": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "InternetGatewayId": {
+          "Ref": "InternetGatewayDNSExample"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/vpcgw"
+      }
+    },
+    "dnsexampleroutetable": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "Route_for_DNS"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/dns_example_routetable"
+      }
+    },
+    "IGWRoute": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "dnsexampleroutetable"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "InternetGatewayDNSExample"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/IGW_Route"
+      }
+    },
+    "DnsSubnetAssociate2a": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "dnsexampleroutetable"
+        },
+        "SubnetId": {
+          "Ref": "subnet2a"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/DnsSubnet_Associate_2a"
+      }
+    },
+    "DnsSubnetAssociate2c": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "dnsexampleroutetable"
+        },
+        "SubnetId": {
+          "Ref": "subnet2c"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "dnsforward/DnsSubnet_Associate_2c"
+      }
+    },
     "sgssh": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
