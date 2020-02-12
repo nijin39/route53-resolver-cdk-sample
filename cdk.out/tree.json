@@ -18,7 +18,7 @@
             "attributes": {
               "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
               "aws:cdk:cloudformation:props": {
-                "cidrBlock": "20.0.0.0/16",
+                "cidrBlock": "100.0.0.0/16",
                 "tags": [
                   {
                     "key": "Name",
@@ -34,7 +34,7 @@
             "attributes": {
               "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
               "aws:cdk:cloudformation:props": {
-                "cidrBlock": "20.0.1.0/24",
+                "cidrBlock": "100.0.1.0/24",
                 "vpcId": {
                   "Ref": "VPC"
                 },
@@ -55,7 +55,7 @@
             "attributes": {
               "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
               "aws:cdk:cloudformation:props": {
-                "cidrBlock": "20.0.2.0/24",
+                "cidrBlock": "100.0.2.0/24",
                 "vpcId": {
                   "Ref": "VPC"
                 },
@@ -138,8 +138,8 @@
                 },
                 "tags": [
                   {
-                    "key": "dns",
-                    "value": "master"
+                    "key": "Name",
+                    "value": "dns_master"
                   }
                 ]
               }
@@ -164,8 +164,8 @@
                 },
                 "tags": [
                   {
-                    "key": "dns",
-                    "value": "slave"
+                    "key": "Name",
+                    "value": "dns_slave"
                   }
                 ]
               }

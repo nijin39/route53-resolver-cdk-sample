@@ -3,7 +3,7 @@
     "VPC": {
       "Type": "AWS::EC2::VPC",
       "Properties": {
-        "CidrBlock": "20.0.0.0/16",
+        "CidrBlock": "100.0.0.0/16",
         "Tags": [
           {
             "Key": "Name",
@@ -18,7 +18,7 @@
     "subnet2a": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "20.0.1.0/24",
+        "CidrBlock": "100.0.1.0/24",
         "VpcId": {
           "Ref": "VPC"
         },
@@ -38,7 +38,7 @@
     "subnet2c": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "20.0.2.0/24",
+        "CidrBlock": "100.0.2.0/24",
         "VpcId": {
           "Ref": "VPC"
         },
@@ -117,8 +117,8 @@
         },
         "Tags": [
           {
-            "Key": "dns",
-            "Value": "master"
+            "Key": "Name",
+            "Value": "dns_master"
           }
         ]
       },
@@ -142,8 +142,8 @@
         },
         "Tags": [
           {
-            "Key": "dns",
-            "Value": "slave"
+            "Key": "Name",
+            "Value": "dns_slave"
           }
         ]
       },

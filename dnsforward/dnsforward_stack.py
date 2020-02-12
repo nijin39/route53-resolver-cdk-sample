@@ -5,40 +5,29 @@ from aws_cdk import (
 
 class DnsforwardStack(core.Stack):
 
-    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
+    def __init__(self, scope: core.Construct, id: str, vpc_ip: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
         
-        cidr = "20.0.0.0/16"
-        
-        # vpc = ec2.Vpc(self, "VPC",
-        #     cidr=cidr,
-        #     max_azs=1
-        #     # subnet_configuration=[ec2.SubnetConfiguration(
-        #     #     cidr_mask=24,
-        #     #     name="Application",
-        #     #     subnet_type=ec2.SubnetType.PUBLIC
-        #     #     ),
-        #     #     ec2.SubnetConfiguration(
-        #     #     cidr_mask=24,
-        #     #     name="Application2",
-        #     #     subnet_type=ec2.SubnetType.PUBLIC
-        #     #     )
-        #     # ]
-        # )
-        
+        if vpc_ip:
+            print("VPC_IP " + vpc_ip)
+            cidr = vpc_ip
+        else:
+            cidr = "10.0.0.0/16"
+
+        # 01. VPC 생성
         cfVpc = ec2.CfnVPC(
             self,
             "VPC",
-            cidr_block = "20.0.0.0/16",
+            cidr_block = cidr,
             tags = [core.Tag(key="Name",value="CDKVPC")]
         )
-    
         
+        # 02. Subnet 생성
         subnet_2a = ec2.CfnSubnet(
             self,
             id="subnet_2a",
             availability_zone="ap-northeast-2a",
-            cidr_block="20.0.1.0/24",
+            cidr_block="100.0.1.0/24",
             map_public_ip_on_launch = True,
             vpc_id=cfVpc.ref,
             tags = [core.Tag(key="Name",value="subnet-2a")]
@@ -48,23 +37,13 @@ class DnsforwardStack(core.Stack):
             self,
             id="subnet_2c",
             availability_zone="ap-northeast-2c",
-            cidr_block="20.0.2.0/24",
+            cidr_block="100.0.2.0/24",
             map_public_ip_on_launch = True,
             vpc_id=cfVpc.ref,
             tags = [core.Tag(key="Name",value="subnet-2c")]
         )
         
-        # subnet_2c = ec2.Subnet(
-        #     self,
-        #     id="subnet_2c",
-        #     availability_zone="ap-northeast-2c",
-        #     cidr_block="20.0.2.0/24",
-        #     vpc_id=vpc.vpc_id
-        # )
-
-
-    
-        
+        # 03. SG 생성
         sg = ec2.CfnSecurityGroup(self,
                                  id="sg-ssh",
                                  vpc_id=cfVpc.ref,
@@ -83,18 +62,8 @@ class DnsforwardStack(core.Stack):
                                                      #from_port=0,
                                                      #to_port=65535,
                                                      cidr_ip="0.0.0.0/0")
-        # security_group = ec2.SecurityGroup(
-        #     self,
-        #     id='test-security-group',
-        #     vpc=(ec2.Vpc)(cfVpc),
-        #     security_group_name='test-security-group'
-        # )
-        
-        # security_group.add_ingress_rule(
-        #     peer=ec2.Peer.ipv4(cidr),
-        #     connection=ec2.Port.tcp(22),
-        # )
-        
+
+        # 04. EC2 생성
         dns_server = ec2.MachineImage.generic_linux({
             "ap-northeast-2" : "ami-00d293396a942208d"
         })
@@ -108,8 +77,8 @@ class DnsforwardStack(core.Stack):
             security_group_ids = [sg.ref],
             subnet_id = subnet_2a.ref,
             tags = [{
-                "key":"dns",
-                "value":"master"
+                "key":"Name",
+                "value":"dns_master"
             }]
         )
         
@@ -122,7 +91,7 @@ class DnsforwardStack(core.Stack):
             security_group_ids = [sg.ref],
             subnet_id = subnet_2c.ref,
             tags = [{
-                "key":"dns",
-                "value":"slave"
+                "key":"Name",
+                "value":"dns_slave"
             }]
         )
