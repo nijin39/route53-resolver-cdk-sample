@@ -14,12 +14,11 @@
         "templateFile": "dnsforward.template.json"
       },
       "metadata": {
-        "/dnsforward/VPC/Resource": [
+        "/dnsforward/VPC": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "VPCB9E5F0B4",
+            "data": "VPC",
             "trace": [
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:266:25)",
               "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
               "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
               "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
@@ -33,18 +32,11 @@
             ]
           }
         ],
-        "/dnsforward/VPC/ApplicationSubnet1/Subnet": [
+        "/dnsforward/subnet_2a": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "VPCApplicationSubnet1SubnetCE118F80",
+            "data": "subnet2a",
             "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:549:24)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
               "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
               "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
               "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
@@ -58,18 +50,11 @@
             ]
           }
         ],
-        "/dnsforward/VPC/ApplicationSubnet1/RouteTable": [
+        "/dnsforward/subnet_2c": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "VPCApplicationSubnet1RouteTable5B6CE71A",
+            "data": "subnet2c",
             "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:564:23)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
               "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
               "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
               "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
@@ -83,18 +68,11 @@
             ]
           }
         ],
-        "/dnsforward/VPC/ApplicationSubnet1/RouteTableAssociation": [
+        "/dnsforward/sg-ssh": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "VPCApplicationSubnet1RouteTableAssociation8DF0EAE5",
+            "data": "sgssh",
             "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:569:9)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
               "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
               "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
               "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
@@ -108,15 +86,11 @@
             ]
           }
         ],
-        "/dnsforward/VPC/ApplicationSubnet1/DefaultRoute": [
+        "/dnsforward/SSH": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "VPCApplicationSubnet1DefaultRouteA4E47D36",
+            "data": "SSH",
             "trace": [
-              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:589:23)",
-              "Vpc.publicSubnets.forEach.publicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:297:30)",
-              "Array.forEach (<anonymous>)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:296:32)",
               "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
               "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
               "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
@@ -130,341 +104,11 @@
             ]
           }
         ],
-        "/dnsforward/VPC/ApplicationSubnet2/Subnet": [
+        "/dnsforward/OUTBOUND": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "VPCApplicationSubnet2Subnet988E96B1",
+            "data": "OUTBOUND",
             "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:549:24)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/ApplicationSubnet2/RouteTable": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplicationSubnet2RouteTableFDC3EEE6",
-            "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:564:23)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/ApplicationSubnet2/RouteTableAssociation": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplicationSubnet2RouteTableAssociationD84040F3",
-            "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:569:9)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/ApplicationSubnet2/DefaultRoute": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplicationSubnet2DefaultRouteC3680A52",
-            "trace": [
-              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:589:23)",
-              "Vpc.publicSubnets.forEach.publicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:297:30)",
-              "Array.forEach (<anonymous>)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:296:32)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/Application2Subnet1/Subnet": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplication2Subnet1Subnet4B1EB777",
-            "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:549:24)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/Application2Subnet1/RouteTable": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplication2Subnet1RouteTableDB20A141",
-            "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:564:23)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/Application2Subnet1/RouteTableAssociation": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplication2Subnet1RouteTableAssociationF47C882E",
-            "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:569:9)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/Application2Subnet1/DefaultRoute": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplication2Subnet1DefaultRouteF53AC5D8",
-            "trace": [
-              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:589:23)",
-              "Vpc.publicSubnets.forEach.publicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:297:30)",
-              "Array.forEach (<anonymous>)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:296:32)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/Application2Subnet2/Subnet": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplication2Subnet2SubnetF506FEB3",
-            "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:549:24)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/Application2Subnet2/RouteTable": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplication2Subnet2RouteTable2D5980B6",
-            "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:564:23)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/Application2Subnet2/RouteTableAssociation": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplication2Subnet2RouteTableAssociation2014085E",
-            "trace": [
-              "new Subnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:569:9)",
-              "new PublicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:699:9)",
-              "availabilityZones.forEach (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:478:42)",
-              "Array.forEach (<anonymous>)",
-              "Vpc.createSubnetResources (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:462:32)",
-              "Vpc.createSubnets (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:453:18)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:14)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/Application2Subnet2/DefaultRoute": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCApplication2Subnet2DefaultRoute3F32690E",
-            "trace": [
-              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:589:23)",
-              "Vpc.publicSubnets.forEach.publicSubnet (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:297:30)",
-              "Array.forEach (<anonymous>)",
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:296:32)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/IGW": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCIGWB7E252D3",
-            "trace": [
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:290:25)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/VPC/VPCGW": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VPCVPCGW99B986DC",
-            "trace": [
-              "new Vpc (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:292:25)",
-              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
-              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
-              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
-              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
-              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
-              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
-            ]
-          }
-        ],
-        "/dnsforward/test-security-group/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "testsecuritygroupCC071DFA",
-            "trace": [
-              "new SecurityGroup (/tmp/jsii-kernel-6LvsPo/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:173:30)",
               "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
               "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
               "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
@@ -482,6 +126,24 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "dnsmaster",
+            "trace": [
+              "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/dnsforward/dns_slave": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dnsslave",
             "trace": [
               "obj._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49)",
               "Kernel._wrapSandboxCode (/home/ubuntu/environment/dnsforward/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
